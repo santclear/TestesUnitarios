@@ -1,0 +1,9 @@
+/.classpath
+/.project
+/.settings
+/target
+.env
+.DS_Store
+make.env
+settings.xml
+
