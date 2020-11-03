@@ -8,13 +8,14 @@ import static org.junit.Assert.assertThat;
 
 import java.util.Date;
 
-import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.FixMethodOrder;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ErrorCollector;
 import org.junit.rules.ExpectedException;
+import org.junit.runners.MethodSorters;
 
 import br.ce.wcaquino.entidades.Filme;
 import br.ce.wcaquino.entidades.Locacao;
@@ -22,6 +23,7 @@ import br.ce.wcaquino.entidades.Usuario;
 import br.ce.wcaquino.exceptions.FilmeSemEstoqueException;
 import br.ce.wcaquino.exceptions.LocadoraException;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING) // ordena a execução dos testes em ordem alfabetica
 public class LocacaoServiceTest {
 
 	private LocacaoService service;
@@ -35,11 +37,6 @@ public class LocacaoServiceTest {
 	@Before // antes de cada teste
 	public void setup(){
 		service = new LocacaoService();
-	}
-	
-	@After // apos cada teste
-	public void testeAfter() {
-		System.out.println("After e impresso apos a execucao de cada teste.");
 	}
 	
 	@Test
